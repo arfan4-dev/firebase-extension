@@ -1,0 +1,200 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  padding:0rem;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  padding-bottom:5px;
+  overflow-y:hidden;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-left: 30px;
+line-height: 0.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 200px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+  
+.heading{
+  display: flex;
+  align-items: center;
+}
+
+
+#btnDownload{
+  padding: 5px;
+  background: #000;
+}
+#btnDownload:hover{
+  background-color: #f9f9f9;
+  color:#1a1a1a ;
+  border-color:#1a1a1a ;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border-width: 2px;
+
+}
+
+#btnDownload:focus,
+#btnDownload:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: red;
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.custom-loader {
+  
+  width: 11px;
+  height: 13px;
+  border-radius: 50%;
+  border: 4px solid #1a1a1a;
+  animation:
+    s10-1 0.8s infinite linear alternate,
+    s10-2 1.6s infinite linear;
+}
+@keyframes s10-1{
+   0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+   12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+   25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+   50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+   62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+   75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+   100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+}
+@keyframes s10-2{ 
+  0%    {transform:scaleY(1)  rotate(0deg)}
+  49.99%{transform:scaleY(1)  rotate(135deg)}
+  50%   {transform:scaleY(-1) rotate(0deg)}
+  100%  {transform:scaleY(-1) rotate(-135deg)}
+}
+
+
+
+
+
+.custom-loader::before,
+.custom-loader::after {
+   content:"";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background:inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.custom-loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+
+@keyframes s3 {
+  100% {transform: rotate(1turn)}
+}
+/* App.css */
+
+.heading {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.upload-btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #f9f9f9; /* Change the background color as needed */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: white;
+    background-color: #535bf2;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

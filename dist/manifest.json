@@ -1,0 +1,14 @@
+{
+    "name":"Upload on firebase",
+    "version":"1.0.0",
+    "manifest_version":3,
+    "description":"Uploads on Firebase",
+    "permissions":[],
+    "action":{
+        "default_title": "chrome extension",
+        "default_popup":"index.html",
+        "default_icon": {
+            "32": "/shared-folder.png"
+        }
+}
+}
